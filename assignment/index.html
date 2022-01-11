@@ -6,66 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+      *{
+        margin: 0;
+      }
+      
+    </style>
   </head>
   <body>
     <div class="container" style="width: 80%; margin: auto;">
       <header>
-        <div class="header-top">
+        <div class="header-top" style="text-align: center; padding: 10px 0; background-color: #272f54;">
           <a href="">
-            <img src="https://caodang.fpt.edu.vn/vinmart/images/icon2a.png" alt=""></a>
+            <img src="https://caodang.fpt.edu.vn/vinmart/images/icon2a.png" alt="" width="110px"></a>
         </div>
-        <div class="header-main">
-          <div class="menu">
-            <ul>
-              <li><a href="">Trang chủ</a></li>
-              <li><a href="">Tuyển sinh</a></li>
-              <li><a href="">Chương trình đào tạo</a></li>
-              <li><a href="">Góc sinh viên</a></li>
-              <li><a href="">Tuyển dụng</a></li>
+        <div class="header-main" style="display: grid; grid-template-columns: 69% 1fr; background-color: #ca7800;">
+          <div class="menu" >
+            <ul >
+              <li style="display: inline-block; padding: 10px 15px;"><a href="/"  style="text-decoration: none; color: white;  ">Trang chủ</a></li>
+              <li style="display: inline-block; padding: 10px 15px;"><a href="/about"  style="text-decoration: none; color: white;  ">Tuyển sinh</a></li>
+              <li style="display: inline-block; padding: 10px 15px;"><a href="/product"  style="text-decoration: none; color: white;  ">Chương trình đào tạo</a></li>
+              <li style="display: inline-block; padding: 10px 15px;"><a href="/contact"  style="text-decoration: none; color: white;  ">Góc sinh viên</a></li>
+              <li style="display: inline-block; padding: 10px 15px;"><a href=""  style="text-decoration: none; color: white;  ">Tuyển dụng</a></li>
             </ul>
           </div>
           <div class="search">
-            <input type="text" placeholder="Tìm kiếm">
-            <input type="submit" value="Tìm kiếm">
+            <form action="" style="padding: 7px 0px">
+              <input type="text" placeholder="Tìm kiếm" style="padding: 3px 10px; width: 210px;">
+              <input type="submit" value="Tìm kiếm" style="padding: 3px 15px; background-color: #272f54; color: white; border: 1px solid white;">
+            </form>
           </div>
         </div>
       </header>
-      <div class="banner">
-        <img src="" alt="">
-      </div>
       <main>
-        <h2>Tin tức học tập</h2>
-        <div class="row">
-          <div class="col">
-            <a href="">
-              <img src="" alt=""></a>
-            <a href="">Vinh danh 295 sinh viên FPT Polytechnic học kỳ Spring 2018</a>
-            <p>Tối ngày 16/6/2018, Cao đẳng FPT Polytechnic Hà Nội đã tổ chức lễ tôn vinh "Ong vàng Poly",
-              tuyên dưng 295 cá nhân và tập thể có thành tích xuất sắc trong học tập cũng như hoạt...
-            </p>  
-          </div>
-          <div class="col">
-            <a href="">
-              <img src="" alt=""></a>
-            <a href="">Sinh viên khối ngành kinh tế học cách "chạm" vào cảm xúc</a>
-            <p>Với sự tham gia của chuyên gia trong lĩnh vực kinh doanh, chương trình đã thu hút đông đảo sinh 
-              viên Cao đẳng FPT Polytechnic tham dự. Đặc biệt các bạn sinh viên bị lôi cuốn bởi.
-            </p>  
-          </div>
-          <div class="col">
-            <a href="">
-              <img src="" alt=""></a>
-            <a href="">Vinh danh 295 sinh viên FPT Polytechnic học kỳ Spring 2018</a>
-            <p>Tối ngày 16/6/2018, Cao đẳng FPT Polytechnic Hà Nội đã tổ chức lễ tôn vinh "Ong vàng Poly",
-              tuyên dưng 295 cá nhân và tập thể có thành tích xuất sắc trong học tập cũng như hoạt...
-            </p>  
-          </div>
-        </div>
+        <div id="app"></div>
       </main>
-      <footer>
-
+      <footer style="text-align: center; padding: 20px 0; margin-top: 30px; background-color: #272f54;">
+        <span style="color: white;">TÊN SINH VIÊN</span>
       </footer>
     </div>
-    <script type="module" src="./main.js"></script>
+
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>

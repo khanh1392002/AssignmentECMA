@@ -4,6 +4,7 @@ import ContactPage from "./pages/contact";
 import HomePage from "./pages/home";
 import NotFoundPage from "./pages/notFound";
 import ProductPage from "./pages/product";
+import NewsDetailPage from "./pages/newsDetail";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -23,6 +24,9 @@ router.on({
     },
     "/contact": () => {
         print(ContactPage.render());
+    },
+    "/news/:id": (value)=>{
+        print(NewsDetailPage.render(value.data.id));
     }
 });
 router.notFound(() => print(NotFoundPage.render()));

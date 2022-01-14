@@ -5,6 +5,9 @@ import HomePage from "./pages/home";
 import NotFoundPage from "./pages/notFound";
 import ProductPage from "./pages/product";
 import NewsDetailPage from "./pages/newsDetail";
+import Dashboard from "./pages/admin/dashboard";
+import AdminNewsPage from "./pages/admin/news/listNews";
+import AdminAddNewsPage from "./pages/admin/news/addNews";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -27,6 +30,15 @@ router.on({
     },
     "/news/:id": (value)=>{
         print(NewsDetailPage.render(value.data.id));
+    },
+    "/admin/dashboard": () => {
+        print(Dashboard.render());
+    },
+    "/admin/news/listNews": () => {
+        print(AdminNewsPage.render());
+    },
+    "/admin/news/addNews": () => {
+        print(AdminAddNewsPage.render());
     }
 });
 router.notFound(() => print(NotFoundPage.render()));
